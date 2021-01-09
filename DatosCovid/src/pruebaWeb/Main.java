@@ -25,6 +25,7 @@ class Main {
 			 Pais pais = gson.fromJson(copiaArreglada, Pais.class);
 			//Properties properties = gson.fromJson(respuesta, Properties.class);
 			System.out.println(pais.toString());
+			System.out.println("prueba");
 		} catch (Exception e) {
 			// Manejar excepción
 			e.printStackTrace();
