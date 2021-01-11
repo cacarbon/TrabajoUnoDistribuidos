@@ -69,7 +69,7 @@ public class HiloPais extends Thread {
 				Collections.addAll(this.paisesHilo, gson.fromJson(copiaArreglada, Pais[].class));
 				for (int i = 0; i < this.paisesHilo.size(); i++) {
 					try (BufferedInputStream inn = new BufferedInputStream(new URL(this.paisesHilo.get(i).getCountryInfo().getFlag()).openStream());
-							  FileOutputStream fileOutputStream = new FileOutputStream("imagenes/"+this.paisesHilo.get(i).getCases()+".png")) {
+							  FileOutputStream fileOutputStream = new FileOutputStream("imagenes/"+this.paisesHilo.get(i).getCases()+"-"+this.paisesHilo.get(i).getCountry()+".png")) {
 							    byte dataBuffer[] = new byte[1024];
 							    int bytesRead;
 							    while ((bytesRead = inn.read(dataBuffer, 0, 1024)) != -1) {
