@@ -3,15 +3,15 @@ package pruebaWeb;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -72,6 +72,14 @@ public class PrincipalPruebas {
 			} catch (Exception e) {
 				// Manejar excepción
 				e.printStackTrace();
+			}
+			
+			Path path = Paths.get("imagenes");
+			try {
+				Files.createDirectories(path);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
 			}
 
 			switch (n) {
