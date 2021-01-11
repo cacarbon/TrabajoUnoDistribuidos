@@ -9,11 +9,11 @@ import java.util.Properties;
 import com.google.gson.Gson;
 class Main {
 	public static void main(String[] args) {
-		String url = "https://disease.sh/v3/covid-19/countries/Poland";
+		String url = "https://disease.sh/v3/covid-19/countries";
 		String respuesta = "";
 		try {
 			respuesta = peticionHttpGet(url);
-			System.out.println("La respuesta es:\n" + respuesta);
+			//System.out.println("La respuesta es:\n" + respuesta);
 			Gson gson = new Gson();
 			
 //			String cadena3=respuesta.substring(1, respuesta.length()-1);
@@ -22,9 +22,14 @@ class Main {
 			// Para que no haya conflicto con la palabra reservada long
 			String copiaArreglada=respuesta.replace("long", "longi");
 			
-			 Pais pais = gson.fromJson(copiaArreglada, Pais.class);
+			 Pais[] listaPaises = gson.fromJson(copiaArreglada, Pais[].class);
 			//Properties properties = gson.fromJson(respuesta, Properties.class);
-			System.out.println(pais.toString());
+			//System.out.println(pais.toString());
+			 
+			 for (int i=0; i<listaPaises.length; i++) {
+				 System.out.println(listaPaises[i].getCountry());
+			 }
+			 System.out.println(listaPaises.length);
 			System.out.println("prueba");
 		} catch (Exception e) {
 			// Manejar excepción
