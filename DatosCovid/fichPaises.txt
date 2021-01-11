@@ -53,7 +53,7 @@ Czechia, CZE
 Côte d'Ivoire, CIV
 DRC, COD
 Denmark, DNK
-Diamond Princess, null
+Diamond Princess, Diamond Princess
 Djibouti, DJI
 Dominica, DMA
 Dominican Republic, DOM
@@ -115,7 +115,7 @@ Libyan Arab Jamahiriya, LBY
 Liechtenstein, LIE
 Lithuania, LTU
 Luxembourg, LUX
-MS Zaandam, null
+MS Zaandam, MS Zaandam
 Macao, MAC
 Macedonia, MKD
 Madagascar, MDG
@@ -130,6 +130,7 @@ Mauritania, MRT
 Mauritius, MUS
 Mayotte, MYT
 Mexico, MEX
+Micronesia, FSM
 Moldova, MDA
 Monaco, MCO
 Mongolia, MNG
