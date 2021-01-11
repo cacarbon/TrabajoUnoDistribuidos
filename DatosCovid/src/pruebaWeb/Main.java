@@ -29,8 +29,7 @@ class Main {
 			 for (int i=0; i<listaPaises.length; i++) {
 				 System.out.println(listaPaises[i].getCountry());
 			 }
-			 System.out.println(listaPaises.length);
-			System.out.println("prueba");
+
 		} catch (Exception e) {
 			// Manejar excepción
 			e.printStackTrace();

@@ -2,7 +2,7 @@ package pruebaWeb;
 
 import java.util.List;
 
-public class Pais {
+public class Pais implements Comparable<Pais> {
 	
 	private String updated;
 	private String country;
@@ -217,6 +217,20 @@ public class Pais {
 		cadena=cadena+ "Casos criticos en total: "+this.getActive()+"\n";
 		return cadena;
 		
+	}
+
+	@Override
+	public int compareTo(Pais pais) {
+		// TODO Auto-generated method stub
+		int n=0;
+		try {
+			int intThis=Integer.parseInt(this.getCases());
+			int intPais=Integer.parseInt(pais.getCases());
+			n=intPais-intThis;
+		}catch (NumberFormatException e){
+			n=0;
+		}
+		return n;
 	}
 	
 
